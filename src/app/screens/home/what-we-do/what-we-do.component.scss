@@ -1,0 +1,146 @@
+@import "../../../../design/mixins/media-queries";
+
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.services-container {
+    display: flex;
+    max-width: 1070px;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.upper-container {
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include mobile-min {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @include tablet-min {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .square-button {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 25px;
+        aspect-ratio: 3/1;
+        font-weight: bold;
+        background-size: 100%;
+        font-size: 42px;
+        background-position: center center;
+        transition: all 0.3s ease-in-out;
+
+        @include mobile-min {
+            aspect-ratio: 1/1;
+
+
+        }
+
+        @include laptop-min {
+            font-size: 72px;
+        }
+
+        &:hover {
+            background-size: 120%;
+        }
+        &:focus-visible {
+            outline: 2px solid purple;
+            outline-offset: 2px;
+        }
+
+        &.ui-ux-button {
+            background-image: url('../../../../assets/images/ui_ux.png');
+            max-width: unset;
+            @include mobile-min {
+                grid-column: span 2;
+                aspect-ratio: 3/1;
+            }
+
+            @include tablet-min {
+                aspect-ratio: 1/1;
+                grid-column: auto;
+            }
+        }
+
+        &.web-button {
+            background-image: url('../../../../assets/images/web.png');
+        }
+
+        &.mobile-button {
+            background-image: url('../../../../assets/images/mobile.png');
+        }
+    }
+}
+
+
+
+
+.bottom-container {
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include tablet-min {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .horizontal-button {
+        width: 100%;
+        aspect-ratio: 2.3/1;
+        border-radius: 25px;
+        background-size: 110%;
+        background-position: center center;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        font-size: 42px;
+        position: relative;
+        background-repeat: no-repeat;
+        padding: 1rem;
+
+        @include mobile-min {
+            aspect-ratio: 2.3/1;
+        font-size: 52px;
+
+        }
+
+        &:hover {
+            background-size: 120%;
+        }
+        &:focus-visible {
+            outline: 2px solid purple;
+            outline-offset: 2px;
+        }
+
+        &.tailored-button {
+            background-image: url('../../../../assets/images/test1.png');
+
+        }
+
+        &.business-growth-button {
+            background-image: url('../../../../assets/images/test2.png');
+
+        }
+
+    }
+
+}

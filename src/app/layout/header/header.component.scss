@@ -1,0 +1,95 @@
+@import "../../../design/mixins/media-queries";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 70px;
+    background-color: #4F4F4F;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 1000px;
+    width: 100%;
+
+    @include laptop-min {
+    border-radius: 55px;
+
+    top: 20px;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+    }
+
+    &.hidden {
+        top: -80px;
+    }
+
+
+    .logo {
+
+    }
+
+    .buttons-container {
+        display: none;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 2rem;
+        border-radius: 25px;
+        border: 1px solid #A8A8A8;
+
+        @include laptop-min {
+            display: flex;
+        }
+
+        .divider {
+            height: 60%;
+            width: 2px;
+            background-color: #A8A8A8;
+        }
+        a {
+            color: #A8A8A8;
+            text-decoration: none;
+
+            &.active {
+                color: white;
+            }
+        }
+    }
+
+
+    .contact-container {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        @include laptop-min {
+            display: flex;
+        }
+
+        .contact-button {
+            position: relative;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 0.5rem 1.5rem;
+            font-size: 16px;
+            border-radius: 12px; /* Adjust for more roundness */
+            background: linear-gradient(to bottom right, #7A15A6, #6d2269, #53166d, #50164D, #7A15A6);
+            -webkit-background-clip: padding-box; /* Clip the gradient to the padding box */
+            background-clip: padding-box;
+            border: 4px solid transparent;
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+        }
+        
+    }
+
+}

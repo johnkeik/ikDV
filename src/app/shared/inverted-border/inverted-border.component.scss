@@ -1,0 +1,12 @@
+:host {
+    --size: 25px;
+    --rotation: 0deg;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(var(--rotation));
+    -webkit-mask: radial-gradient(circle var(--size) at 0px 0px,
+            transparent var(--size),
+            black var(--size));
+}

@@ -1,0 +1,71 @@
+
+<div class="padding-elements-wrapper">
+  <div class="wrapper">
+    <video loop autoplay class="home-background">
+      <source src="../../../assets/home-background.webm" type="video/webm">
+    </video>
+
+    <div class="title-wrapper">
+
+      <div class="text-container">
+        <app-inverted-border [style.top]="'-25px'" [style.left]="'0'" [style.background]="'var(--primary-background)'"
+          [style.--rotation]="'90deg'" />
+        <span>Unlocking</span>
+        <app-inverted-border [style.bottom]="'0px'" [style.right]="'-25px'"
+          [style.background]="'var(--primary-background)'" [style.--rotation]="'90deg'" />
+
+      </div>
+      <div class="text-container">
+        <span>Digital Excelence</span>
+        <app-inverted-border [style.bottom]="'0px'" [style.right]="'-25px'"
+          [style.background]="'var(--primary-background)'" [style.--rotation]="'90deg'" />
+      </div>
+    </div>
+
+    <div class="top-right">
+      <div class="cloud">
+        <span class="title">Explore our services</span>
+        <span class="description">From custom web applicaitons to advanced mobile solutions we develop the tools that help businesses adapt
+          and grow.</span>
+      </div>
+      <app-inverted-border [style.top]="'0px'" [style.left]="'-25px'" [style.background]="'var(--primary-background)'"
+      [style.--rotation]="'-90deg'" />
+      <app-inverted-border [style.bottom]="'-25px'" [style.right]="'0px'" [style.background]="'var(--primary-background)'"
+      [style.--rotation]="'-90deg'" />
+
+    </div>
+    <!-- <div class="explore-services">
+      <div class="explore-title-wrapper">
+        <span class="title">Explore our services</span>
+      </div>
+      <app-inverted-border [style.top]="'0px'" [style.left]="'-25px'" [style.background]="'var(--primary-background)'"
+        [style.--rotation]="'-90deg'" />
+      <div class="description">
+        <span>From custom web applicaitons to advanced mobile solutions we develop the tools that help businesses adapt
+          and grow.</span>
+        <app-inverted-border [style.top]="'0px'" [style.left]="'-25px'" [style.background]="'var(--primary-background)'"
+          [style.--rotation]="'-90deg'" />
+        <app-inverted-border [style.bottom]="'-25px'" [style.right]="'0px'" [style.background]="'var(--primary-background)'"
+          [style.--rotation]="'-90deg'" />
+        
+        <button class="button-undecorated services-button">.</button>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<div class="section-title">
+  <span class="title">What we do</span>
+  <img src="../../../assets/images/section-arrow.svg" alt=""/>
+</div>
+<app-what-we-do />
+<div class="section-title">
+  <span class="title">Why Choose Us</span>
+  <img src="../../../assets/images/section-arrow.svg" alt=""/>
+</div>
+<app-choose />
+<div class="section-title">
+  <span class="title">Our Workflow</span>
+  <img src="../../../assets/images/section-arrow.svg" alt=""/>
+</div>
+<app-workflow />

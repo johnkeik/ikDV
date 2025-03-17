@@ -1,0 +1,119 @@
+@import "../../../../design/mixins/media-queries";
+
+:host {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+}
+
+.service-wrapper {
+    display: flex;
+    width: 100%;
+    background-color: var(--secondary-background);
+    flex-direction: column;
+    border-radius: 25px;
+    overflow: hidden;
+
+
+    .service-header{
+        width: 100%;
+        border-radius: 25px 25px 25px 0;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        overflow: hidden;
+
+ 
+                        
+            img {
+                width: 100%;
+                transition: all 0.2s ease-in-out;
+                max-height: 300px;
+                object-fit: cover;
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        
+        
+        .title-wrapper {
+            padding: 1rem 2rem;
+            background-color: var(--secondary-background);
+            border-top-right-radius: 25px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+
+    .service-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 2rem 3rem 2rem;
+        gap: 16px;
+
+        .description {
+            font-size: 14px;
+            max-width: 350px;
+        }
+
+        .key-features-container {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+
+            @include tablet-min {
+                grid-template-columns: repeat(2,1fr);
+            }
+            gap: 16px;
+
+            .key-feature {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                max-width: 350px;
+                width: 100%;
+
+                .image {
+                    min-width: 50px;
+                    height: 50px;
+                    background-color: lightgray;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: var(--secondary-background)
+                }
+
+                .key-feature-content {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 4px;
+
+                    .title {
+                        font-weight: bold;
+                    }
+
+                    .description{
+                        font-size: 14px;
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
+}

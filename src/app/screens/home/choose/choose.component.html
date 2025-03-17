@@ -1,0 +1,17 @@
+<div class="choose-container">
+    <!-- <img src="../../../../assets/images/background.png" alt="Background Image" class="background-image"> -->
+    <!-- <div class="overlay"></div> -->
+
+    @for (item of [].constructor(4); track $index) {
+        <div class="grid-item" [ngClass]="{'right-aligned': $index % 2 === 0}">
+            <div class="principle">
+                <span class="title">Interpersonal Communication</span>
+                <span class="description">We don't see you as a client.We are partners.With personal communication and meetings,we will know your exact needs.The final product will be the one you expected.</span>
+            </div>
+        </div>
+    }
+
+
+
+
+</div>

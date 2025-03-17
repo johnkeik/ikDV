@@ -1,0 +1,19 @@
+<div class="workflow-container">
+    @for (item of processSteps; track $index; let first=$first; let last=$last) {
+        <div class="step-container">
+            <div class="icon-container" [ngClass]="{primary: first}">
+                <img [src]="item.imgSrc" alt="" class="icon">
+            </div>
+            <div class="text-container">
+                <span class="title">{{item.title}}</span>
+                <span class="description">{{item.description}}</span>
+            </div>
+            @if(!last){
+                <div class="line"></div>
+            }
+        </div>
+    }
+
+    <div class="separator"></div>
+    <button class="button-undecorated need-app-button">Need an app? Lets talk about it!</button>
+</div>

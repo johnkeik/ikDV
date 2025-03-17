@@ -1,0 +1,35 @@
+@import "./mixins/media-queries";
+
+:root {
+    --primary: #7A15A6;
+
+    --primary-background: #2B2B2B;
+    --primary-text: #fff;
+
+    --secondary-background: #1B1B1B;
+
+    --white-background: #fff;
+    --white-background-contrast-text: #1B1B1B; 
+
+    --workflow-tiles-background: #D9E2ED;
+    --workflow-tiles-text: #2E2E2E;
+
+    --error: #C72929;
+    --error-container: #FFE1E1;
+    --success: #0E775C;
+    --success-container: #D3F3EC;
+  
+
+
+
+    --font-size-small: 0.875rem;
+    --font-size-regular: 1rem;
+    --font-size-large: 2rem;
+    --font-size-xl: 3rem;
+
+
+
+    --desktop-page-spacing: 60px;
+    --tablet-page-spacing: 60px;
+    --mobile-page-spacing: 60px;
+}

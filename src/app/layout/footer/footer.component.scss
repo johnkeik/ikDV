@@ -1,0 +1,95 @@
+@import "../../../design/mixins/media-queries";
+
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 24px 24px 24px;
+    background-color: #1B1B1B;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    position: relative;
+    z-index: 1000;
+
+    .upper-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @include tablet-min {
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+
+            @include tablet-min {
+                align-items: start;
+                text-align: start;
+            }
+
+            .logo {
+                width: 140px;
+                height: auto;
+                min-width: 140px;
+                max-width: 140px;
+            }
+
+            .description {
+                font-size: 14px;
+                max-width: 250px;
+            }
+        }
+
+        .contact-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-weight: bold;
+            font-size: 1rem;
+            gap: 16px;
+
+            @include tablet-min {
+                align-items: start;
+            }
+
+            .social-wrapper {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+
+                .social-container {
+                    display: flex; 
+                    gap: 20px;
+                }
+                .social-icon {
+                    width: 35px;
+                    height: 35px;
+                    background-color: white;
+                    border-radius: 100%;
+                }
+                
+            }
+
+            .email-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include tablet-min {
+                    align-items: start;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@import "../../../../design/mixins/media-queries";
+
+:host {
+    background-color: white;
+    width: 100%;
+    margin: 50px 0;
+    padding: 55px 15px;
+    border-radius: 25px;
+    position: relative;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @include tablet-min {
+        max-width: fit-content;
+        padding: 80px 80px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        height: 100px;
+        background-color: white;
+        left: 0;
+        right: 0;
+
+        @include tablet-min {
+            display: none;
+        }
+    }
+
+}
+
+.workflow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .step-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+
+        @include tablet-min {
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 12px;
+            width: 2px;
+            background-color: lightgrey;
+
+            @include tablet-min {
+                left: 39px;
+            }
+        }
+
+        .icon-container {
+            width: 65px;
+            height: 65px;
+            background-color: #D9E2ED;
+            border-radius: 15px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.primary {
+                background-color: var(--primary);
+            }
+
+            @include tablet-min {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .text-container {
+            color: black;
+            padding-left: 25px;
+            padding-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            max-width: 350px;
+
+            @include tablet-min {
+                gap: 8px;
+                padding-bottom: 40px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .separator {
+        width: 60%;
+        height: 2px;
+        background-color: lightgrey;
+        margin: 30px 0 50px 0;
+    }
+
+    .need-app-button {
+        color: black;
+        border: 2px solid transparent;
+        padding: 1rem 1.5rem;
+        border-image: linear-gradient(to bottom right, #DA8FFB 0%, #FF48F7 25%, #AA3FD9 50%, #50164D 75%, #7A15A6 100%);
+        border-image-slice: 1;
+        font-weight: bold;
+        text-align: center;
+    }
+}

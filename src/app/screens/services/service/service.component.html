@@ -1,0 +1,39 @@
+<div class="service-wrapper">
+    <div class="service-header">
+            <img [src]="service().headerImg" alt="">
+        <div class="title-wrapper">
+            <app-inverted-border 
+                [style.top]="'-25px'" 
+                [style.left]="'0'"
+                [style.--rotation]="'90deg'" 
+                [style.background]="'var(--secondary-background)'" 
+            />
+            <app-inverted-border 
+                [style.bottom]="'0px'" 
+                [style.right]="'-25px'"
+                [style.--rotation]="'90deg'" 
+                [style.background]="'var(--secondary-background)'" 
+            />
+            <span class="title">{{service().title}}</span>
+        </div>
+    </div>
+    <div class="service-content">
+        <span class="description">{{service().description}}</span>
+        <div class="key-features-container">
+            @for (feature of service().keyFeatures; track $index) {
+                <div class="key-feature">
+                    <div class="image">{{$index + 1}}</div>
+                    <div class="key-feature-content">
+                        <span class="title">
+                            {{feature.title}}
+                        </span>
+                        <span class="description">
+                            {{feature.description}}
+                        </span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

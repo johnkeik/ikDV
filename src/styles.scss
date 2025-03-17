@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+// IMPORTANT: The order of imports defines specificity. Last import has higher specificity
+@import './assets/styles/normalize.css';
+@import './design/mixins/media-queries.scss';
+@import './design/mixins/spacing-generators.scss';
+@import './design/custom.scss';
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #2B2B2B;
+    color: white;
+    margin: 0;
+}

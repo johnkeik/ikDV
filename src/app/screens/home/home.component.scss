@@ -1,0 +1,175 @@
+@import "../../../design/mixins/media-queries";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padding-elements-wrapper {
+    width: 100%;
+    padding: 0 15px;
+
+    @include tablet-min {
+        padding: 0 60px;
+
+    }
+}
+
+.wrapper {
+    background-color: purple;
+    min-height: calc(80vh - 130px);
+
+    @include mobile-min {
+        border-radius: 25px;
+
+    }
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    max-width: fit-content;
+    position: absolute;
+    bottom: 0;
+}
+
+.text-container {
+    border-top-right-radius: 25px;
+    background-color: #2B2B2B;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem 0.5rem 0;
+    font-size: 32px;
+    font-weight: bold;
+    max-width: fit-content;
+
+    @include mobile-min {
+        font-size: 38px;
+    }
+
+    @include tablet-min {
+        padding: 1rem 2rem 1rem 0;
+        font-size: 50px;
+    }
+
+    @include laptop-min {
+        font-size: 72px;
+    }
+
+}
+
+
+.explore-services {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    max-width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 25px;
+
+
+    .explore-title-wrapper {
+        background-color: var(--primary-background);
+        padding: 0.5rem 0 0.5rem 1.5rem;
+        font-size: 28px;
+        font-weight: bold;
+        border-bottom-left-radius: 25px;
+        text-wrap: nowrap;
+
+        @include mobile-min {
+            font-size: 32px;
+        }
+
+        @include tablet-min {
+            padding: 1rem 0 1rem 2rem;
+            font-size: 42px;
+        }
+    }
+
+    .description {
+        max-width: 240px;
+        background-color: var(--primary-background);
+        text-align: justify;
+        padding: 0 0 1rem 1rem;
+        border-bottom-left-radius: 25px;
+        position: relative;
+        font-size: 14px;
+
+        @include tablet-min {
+            max-width: 300px;
+            padding: 0 0 1rem 2rem;
+            font-size: 16px;
+        }
+
+        .services-button {
+            position: absolute;
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            left: -75px;
+            top: 25px;
+        }
+    }
+}
+
+.section-title {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    width: 100%;
+
+    .title {
+        font-size: 72px;
+        margin-right: 16px;
+        margin-left: 60px;
+    }
+}
+
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-background);
+    border-bottom-left-radius: 25px;
+    display: flex;
+    padding: 0 0 2rem 2rem;
+
+    .cloud {
+        background-image: url('../../../assets/images/abstract-background.jpg');
+        background-size: 100%;
+        padding: 1rem 2rem;
+        max-width: 350px;
+        color: black;
+        border-radius: 25px;
+        position: relative;
+
+        .title {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+}
